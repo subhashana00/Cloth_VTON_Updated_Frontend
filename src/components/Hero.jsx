@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion'; 
 import { VelocityScroll } from "./ui/scroll-based-velocity";
-// import SplashCursor from '@/components/Animations/SplashCursor/SplashCursor';
+import SplashCursor from '@/components/Animations/SplashCursor/SplashCursor';
 
 const Hero = () => {
   const videoRef = useRef(null);
@@ -20,7 +20,7 @@ const Hero = () => {
       <div className='flex flex-col relative opacity-86 w-full h-[500px] overflow-hidden z-0'> {/* Adjust height here */}
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-          {/* {isPlaying && <SplashCursor />} */}
+          {isPlaying && <SplashCursor />}
           <motion.video
             ref={videoRef}
             src="src/assets/video1.mp4" // Video source
